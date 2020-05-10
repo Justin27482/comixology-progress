@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Ubooquity</title>
+        <meta name="mobile-web-app-capable" content="yes">
+        <style>
+            html{
+                background:url('progressbar.gif');
+                background-repeat: no-repeat;
+                background-position: 46vw 49vh;
+            }
+            body, .topright-menu{ 
+                display: none; 
+            }
+            .primary_navigation_frame {
+                margin-top: 3px;
+            }
+        </style>
+        <script type="text/javascript" src="themeScript.js"></script>
+        <script type="text/javascript">
+            function pageFunction() {
+                document.title = "Mobile Access to Ubooquity";
+                var myURL = window.location.href;
+                myURL = myURL.substring(0, myURL.length - 17);
+                $('#comicServerURL').text(myURL +"/opds-comics");
+                $('#bookServerURL').text(myURL +"/opds-books");
+                if(!settingsJSON['isComicsProviderEnabled']){
+                    $('.comicsOPDS').hide();
+                }
+                if(!settingsJSON['isBooksProviderEnabled']){
+                    $('.booksOPDS').hide();
+                }
+                if((!settingsJSON['isComicsProviderEnabled'])||(!settingsJSON['isBooksProviderEnabled'])){
+                    $('.spacer').hide()
+                }
+            }
+        </script>
+        <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png"></link>
+        <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png"></link>
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png"></link>
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"></link>
+        <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png"></link>
+        <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png"></link>
+    </head>
+    <body class="noBreadcrumb">
+        <div class="content_body clearfix">
+            <div class="unlimited-header unlimited-v2">
+                <div class="unlimited-header-content">
+                    <div class="stripe-heading"><div class="stripe-banner-text">Mobile Access to Ubooquity</div></div>
+                    <div class="primary-heading">Unlimited Reading. Anywhere You Go.</div>
+                    <div class="heading-content">
+                        Ubooquity supports OPDS (Open Publication Distribution System), which allows accessing the comic server externally. 
+                        <br>
+                        Some mobile apps that support OPDS are linked in the "Ways to Read" section of the footer.
+                    </div>
+                    <ul class="try-now">
+                        <li class="comicsOPDS"><strong>Comics Feed:</strong></li>
+                        <li id="comicServerURL" class="comicsOPDS"></li>
+                        <li class="spacer" />
+                        <li class="booksOPDS"><strong>Books Feed:</strong></li>
+                        <li id="bookServerURL" class="booksOPDS"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    </body>
+</html>

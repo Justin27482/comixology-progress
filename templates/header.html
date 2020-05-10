@@ -1,0 +1,97 @@
+<div id="header">
+    <nav class="top-navigation flat-nav">
+        <div class="logo_and_ancillary_navigation_section">
+            <a href="/" id="logo" class="comixology-logo"></a>
+            <div class="ancillary_navigation_section">
+                <div class="non_shopping_cart_frame">
+                    <div class="non_shopping_cart_canvas">
+                        <div class="non_shopping_cart">
+                            <ul class="sf-menu topright-menu sf-js-enabled sf-arrows">
+                            <li id="menuitem_my_books">
+                            <a class="my_booksLink" href="/theme/mybooks.htm"><strong>My Books</strong></a>
+                            </li>
+                            <li id="menuitem_login">
+                            <a id="username" class="loginLink dropdown" href="#" onclick="return false;">Log In</a>
+                            <ul>
+                            <li><a href="#" onclick="clearIDCache()" style="padding-right:0;">Clear Cache</a></li>
+                            <li><a href="/?logout=true" onclick="clearUsername()">Log Out</a></li>
+                            </ul>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="primary_navigation_frame">
+            <div class="primary_navigation_canvas">
+                <ul class="sf-menu main-menu sf-js-enabled sf-arrows">
+                    <li id="menuitem_home">
+                        <a href="/"><img class="icon" alt="Home"></a>
+                    </li>
+                    <li class="comicsOnly" id="menuitem_new_comics">
+                        <a href="/comics/?latest=true">New</a>
+                    </li>
+                    <li class="booksOnly" id="menuitem_new_books">
+                        <a href="/books/?latest=true">New</a>
+                    </li>
+                    <li class="both" id="menuitem_new">
+                        <a class="dropdown sf-with-ul" href="#" onclick="return false;">New</a>
+                        <ul style="display: none;">
+                            <li id="submenuitem_new_books">
+                                <a href="/books/?latest=true">Books</a>
+                            </li>
+                            <li id="submenuitem_new_comics">
+                                <a href="/comics/?latest=true">Comics</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="menuitem_browse">
+                        <a class="dropdown sf-with-ul" href="#" onclick="return false;">Browse</a>
+                        <ul style="display: none;">
+                            <li class="books" id="submenuitem_browse_authors">
+                                <a id="submenuitem_browse_authorsLink" href="/books/">Authors</a>
+                            </li>
+                            <li class="comics" id="submenuitem_browse_publisher">
+                                <a id="submenuitem_browse_publisherLink" href="/comics/">Publishers</a>
+                            </li>
+                            <li class="books" id="submenuitem_browse_series">
+                                <a id="submenuitem_browse_seriesLink" href="/books/">Series</a>
+                            </li>
+                            <li class="comics" id="submenuitem_browse_storyArc">
+                                <a id="submenuitem_browse_storyArcLink" href="/comics/">Story Arcs</a>
+                            </li>
+                            <li class="booksOnly" id="submenuitem_browse_randomBooksOnly">
+                                <a href="/books/?random=true">Random</a>
+                            </li>
+                            <li class="comicsOnly" id="submenuitem_browse_randomComicsOnly">
+                                <a href="/comics/?random=true">Random</a>
+                            </li>
+                            <li class="both" id="submenuitem_browse_randomBooks">
+                                <a href="/books/?random=true">Random Books</a>
+                            </li>
+                            <li class="both" id="submenuitem_browse_randomComics">
+                                <a href="/comics/?random=true">Random Comics</a>
+                            </li>
+                            <li class="files" id="submenuitem_audiobooks">
+                                <a id="submenuitem_audiobooksLink" href="/files/">Audiobooks</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="files" id="menuitem_files">
+                        <a href="/files/">Files</a>
+                    </li>
+                    <li id="menuitem_mobile">
+                        <a href="/theme/mobile.htm">Mobile</a>
+                    </li>
+                </ul>
+                <form class="MainSearchForm" id="searchForm" action="/comics/?search=true" method="post">
+                    <div class="row field_search">
+                        <label for="searchTerm"></label>
+                        <input maxlength="50" placeholder="Search by Title, Publisher, or Creator" class="search searchInput" id="searchTerm" value="" name="searchstring" type="text">
+                    </div>
+                </form>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </nav>
+</div>

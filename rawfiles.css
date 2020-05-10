@@ -1,0 +1,9 @@
+html{
+    background:url('/theme/progressbar.gif');
+    background-repeat: no-repeat;
+    background-position: 46vw 49vh;
+}
+
+body, .topright-menu, table{
+    display: none;
+} 
